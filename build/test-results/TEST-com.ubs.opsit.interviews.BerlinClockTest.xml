@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ubs.opsit.interviews.BerlinClockTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2018-05-08T20:34:57" hostname="CoolDeep" time="0.006">
+  <properties/>
+  <testcase name="testForRandomTime" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.001"/>
+  <testcase name="testForMidnight" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <testcase name="testWhenInputTimeFormatIsNotValid" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <testcase name="testOneSecondBeforeMidnight" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <testcase name="testWhenTimeIsZero" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <testcase name="testForOutOfRangeHour" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <testcase name="testForOutOfRangeMinutes" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.001"/>
+  <testcase name="testForOutOfRangeSeconds" classname="com.ubs.opsit.interviews.BerlinClockTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
