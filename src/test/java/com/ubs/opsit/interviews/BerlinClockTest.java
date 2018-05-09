@@ -1,11 +1,19 @@
 package com.ubs.opsit.interviews;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class BerlinClockTest {
-    BerlinClock berlinClock = new BerlinClock();
+
+    BerlinClock berlinClock;
+
+    @Before
+    public void intialize(){
+        berlinClock = new BerlinClock();
+    }
+
 
     @Test(expected = IllegalArgumentException.class)
     public void testWhenInputTimeFormatIsNotValid(){

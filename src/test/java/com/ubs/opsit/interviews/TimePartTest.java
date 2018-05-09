@@ -1,5 +1,6 @@
 package com.ubs.opsit.interviews;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class TimePartTest {
@@ -36,12 +37,18 @@ public class TimePartTest {
     @Test
     public void testForValidTime(){
         TimePart timePart = new TimePart("23:42:42");
+        Assert.assertEquals(timePart.getHours(),23);
+        Assert.assertEquals(timePart.getMinutes(),42);
+        Assert.assertEquals(timePart.getSeconds(),42);
 
     }
 
     @Test
     public void testForZeroTime(){
         TimePart timePart = new TimePart("00:00:00");
+        Assert.assertEquals(timePart.getHours(),0);
+        Assert.assertEquals(timePart.getMinutes(),0);
+        Assert.assertEquals(timePart.getSeconds(),0);
 
     }
 }
