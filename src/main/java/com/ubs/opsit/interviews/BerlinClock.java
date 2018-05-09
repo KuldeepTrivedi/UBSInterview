@@ -19,9 +19,9 @@ public class BerlinClock implements TimeConverter {
         timePart = new TimePart(aTime);
     }
 
-    private String getLampStatus(int timeLeftForDisplay, int notionValueOfLamp, char[] lamps){
+    private String getLampStatus(int timeLeftForDisplay, int notionValueOfLampInCurrentRow, char[] lamps){
         int totalLampsInRow = lamps.length;
-        int totalOnLamps = timeLeftForDisplay/notionValueOfLamp;
+        int totalOnLamps = timeLeftForDisplay/notionValueOfLampInCurrentRow;
         for(int i= totalLampsInRow-1;i>=totalOnLamps;i--){
             lamps[i] ='O';
         }
@@ -29,7 +29,7 @@ public class BerlinClock implements TimeConverter {
     }
 
 
-   private String getLampsToDisplaySecond(char[] lamps){
+   private String getLampsToDisplaySeconds(char[] lamps){
         if(timePart.getSeconds()%2==1){
             lamps[0]='O';
         }
@@ -37,15 +37,15 @@ public class BerlinClock implements TimeConverter {
     }
 
 
-    private int getTimeLeftToDisplayInSecondRow(int totalTime,int notionValueOfLampInFirstRow ){
-        return totalTime%notionValueOfLampInFirstRow;
+    private int getTimeLeftToDisplayInSecondRow(int totalTime,int notionValueOfLampInPreviousRow ){
+        return totalTime%notionValueOfLampInPreviousRow;
     }
 
 
 
     private String getNormalizedBerlinTime(){
         String [] berlinTime ={
-                getLampsToDisplaySecond(lamps[0]),
+                getLampsToDisplaySeconds(lamps[0]),
                 getLampStatus(timePart.getHours(),5, lamps[1]),
                 getLampStatus(getTimeLeftToDisplayInSecondRow(timePart.getHours(),5),1, lamps[2]),
                 getLampStatus(timePart.getMinutes(),5, lamps[3]),
